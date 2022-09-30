@@ -14,4 +14,8 @@ public class Joke {
 
     @JsonProperty("joke")
     private String text;
+
+    public String prettify() {
+        return String.format("@|bold,fg(green) %s|@ @|bold,underline,bg(white),fg(red) %s|@", type, text);
+    }
 }

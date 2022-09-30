@@ -5,7 +5,6 @@ import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import org.example.dk.joke.api.Joke;
 import org.example.dk.joke.api.JokesApiClient;
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import static picocli.CommandLine.Help.Ansi;
 
@@ -27,8 +26,7 @@ public final class JokeCommand implements Runnable {
         }
         while (joke.getType().contains("Chuck Norris"));
 
-        System.out.println(Ansi.AUTO.string(
-                String.format("@|bold,fg(green) %s|@ @|bold,underline,bg(white),fg(red) %s|@", joke.getType(), joke.getText())));
+        System.out.println(Ansi.AUTO.string(joke.prettify()));
 
         //Exits immediatly without a delay imposed by the Netty async execution, which is what Micronaut's HttpClient uses underneith.
         System.exit(0);
