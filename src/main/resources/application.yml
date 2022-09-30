@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: joke
+  codec:
+    json:
+      additionalTypes:
+        - text/html
+  server:
+    netty:
+      parent:
+        shutdown-quiet-period: 50ms
+        timeout: 50ms
+
+jokes.api.url: https://jokes.guyliangilsing.me/retrieveJokes.php
