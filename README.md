@@ -6,7 +6,7 @@ Micronaut and GraalVM native image targeting JDK 17.
 ## How to build and enjoy the native executable image
 
 - Install Graal VM JDK 17. The easiest way to install GraalVM on Linux or Mac is to use [sdkman](https://sdkman.io/)
-  - `sdk install java 22.1.0.r17-grl
+  - `sdk install java 22.1.0.r17-grl`
 - Install native-image tool
   - `gu install native-image`
 - To compile native image into a binary executable
